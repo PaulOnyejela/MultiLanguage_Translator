@@ -1,8 +1,25 @@
-# React + Vite
+# Translator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This Translator App allows users to easily translate text between different languages. It provides a simple and elegant user interface with a multilingual greeting screen. The app supports language selection, text input, and text translation using an external translation API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Multilingual Greetings:** The app greets the user in various languages (e.g., English, Georgian, Zulu, Swahili, Japanese, Spanish) on the initial screen.
+- **Language Selection:** Users can select a source language and a target language for translation.
+- **Text Input:** The app allows users to enter text that they want to translate. A character limit of 200 characters is enforced.
+- **Translation:** The app uses an external API to perform translation and display the result.
+- **Language Swap:** Users can swap the source and target languages with a button click.
+- **Responsive UI:** The app is responsive, designed to adapt to both small and large screen sizes.
+
+## Installation
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/translator-app.git
+   cd translator-app
+    npm install
+   npm start
+
