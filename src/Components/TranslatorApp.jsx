@@ -92,4 +92,85 @@ const TranslatorApp = ({ onClose }) => {
     }
   }
 
+  return (
+    <div className="w-full flex flex-col gap-y-4 justify-center items-center px-6 sm:px-8 pt-12 pb-6 relative">
+      {/* Close button that triggers the onClose prop to close the translator app */}
+      <button className="absolute top-4 right-4">
+        <i className="fa-solid fa-xmark text-xl text-gray-300" onClick={onClose}></i>
+      </button>
+
+      {/* Language selection section */}
+      <div className="w-full min-h-20 flex justify-center items-center px-4 bg-gradient-to-r from-[#b6f492] to-[#338b93] text-gray-700 rounded-lg">
+        {/* 'From' language selection */}
+        <div className="language" onClick={() => handleLanguageClick('from')}>
+          {languages[selectedLanguageFrom] || 'English'}
+        </div>
+
+        {/* Language swap button */}
+        <i
+          className="fa-solid fa-arrows-rotate text-2xl mx-8 cursor-pointer"
+          onClick={handleSwapLanguages}
+        ></i>
+
+        {/* 'To' language selection */}
+        <div className="language" onClick={() => handleLanguageClick('to')}>
+          {languages[selectedLanguageTo] || 'English'}
+        </div>
+      </div>
+
+      {/* Language dropdown list */}
+      {showLanguages && (
+        <div
+          className="w-[calc(100%-4rem)] h-[calc(100%-9rem)] bg-gradient-to-r from-[#b6f492] to-[#338b93] absolute top-32 left-8 z-10 rounded shadow-lg p-4 overflow-y-scroll scrollbar-hide"
+          ref={dropdownRef}
+        >
+          <ul>
+            {Object.entries(languages).map(([code, name]) => (
+              <li
+                className="cursor-pointer hover:bg-[#10646b] transition duration-200 p-2 rounded"
+                key={code}
+                onClick={() => handleLanguagesSelect(code)}
+              >
+                {name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Input text area */}
+      <div className="w-full relative">
+        <textarea
+          className="textarea text-gray-200"
+          value={inputText || ''}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
+        ></textarea>
+        {/* Display character count */}
+        <div className="absolute bottom-2 right-4 text-gray-400">
+          {charCount}/{maxChars}
+        </div>
+      </div>
+
+      {/* Translate button */}
+      <button
+        className="w-12 h-12 bg-gradient-to-r from-[#b6f492] to-[#338b93] rounded-full text-2xl text-gray-600 flex justify-center items-center active:translate-y-[1px]"
+        onClick={handleTranslate}
+      >
+        <i className="fa-solid fa-chevron-down"></i>
+      </button>
+
+      {/* Display the translated text */}
+      <div className="w-full">
+        <textarea
+          className="textarea text-[#b6f492]"
+          value={translatedText || ''}
+          readOnly
+        ></textarea>
+      </div>
+    </div>
+  )
+}
+
+export default TranslatorApp
 
