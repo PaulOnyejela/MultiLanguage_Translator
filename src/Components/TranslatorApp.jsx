@@ -13,3 +13,23 @@ const TranslatorApp = ({ onClose }) => {
   const [charCount, setCharCount] = useState(0) // State to track character count in the input text
   const maxChars = 200 // Max character limit for the input text
   const dropdownRef = useRef(null) // Ref to track the language selection dropdown element
+
+  // Function to handle clicks outside the dropdown to close it
+  const handleClickOutside = (e) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      setShowLanguages(false) // Close the dropdown when clicking outside
+    }
+  }
+
+  // useEffect hook to handle adding/removing event listener for clicks outside the dropdown
+  useEffect(() => {
+    if (showLanguages) {
+      document.addEventListener('mousedown', handleClickOutside) // Add event listener when dropdown is shown
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside) // Remove event listener when dropdown is hidden
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside) // Cleanup on unmount
+    }
+  }, [showLanguages]) // Dependency array makes sure the effect runs whenever 'showLanguages' changes
+
