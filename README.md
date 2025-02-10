@@ -4,7 +4,8 @@
 
 This Translator App allows users to easily translate text between different languages. It provides a simple and elegant user interface with a multilingual greeting screen. The app supports language selection, text input, and text translation using an external translation API.
 ## slide: https://gamma.app/docs/React-Based-Multilingual-Translator-App-mlfpdp8ikxy8gef
-## video demo: 
+## video demo:
+## deployed app link: https://multilangtranslator.netlify.app/
 
 ## Features
 
