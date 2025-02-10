@@ -4,6 +4,7 @@
 
 This Translator App allows users to easily translate text between different languages. It provides a simple and elegant user interface with a multilingual greeting screen. The app supports language selection, text input, and text translation using an external translation API.
 ## slide: https://gamma.app/docs/React-Based-Multilingual-Translator-App-mlfpdp8ikxy8gef
+## video demo: 
 
 ## Features
 
@@ -18,9 +19,50 @@ This Translator App allows users to easily translate text between different lang
 
 1. Clone the repository to your local machine:
 
-   ```bash
    git clone https://github.com/your-username/translator-app.git
    cd translator-app
     npm install
    npm start
+
+ ##  Project Structure
+**App.js:** The main entry component of the app. It handles the state to toggle between the introductory screen and the translator interface.
+**TranslatorStart.js:** Displays the greeting screen and a "Start" button to enter the translation interface.
+**TranslatorApp.js:** The core of the app. It handles language selection, text input, text translation, and the swap functionality.
+**languagesData.js:** A list of language codes and their corresponding names, used for language selection.
+
+## Core Components
+**App.js**
+This is the root component that controls whether the app shows the greeting screen (TranslatorStart) or the translation screen (TranslatorApp). It toggles the state using the useState hook.
+
+**TranslatorStart.js**
+The greeting screen that welcomes users in multiple languages. The "Start" button triggers the onStart function to navigate to the translation interface (TranslatorApp).
+
+**TranslatorApp.js**
+This component is the translation interface, which contains:
+
+**Language Selection:** The user can select the source and target languages.
+**Text Input:** The user can enter text to be translated.
+**Text Translation:** Translates the input text via an external translation API.
+**Language Swap:** Swaps the source and target languages when clicked.
+
+## Key Features and Functionality
+**Language Selection:**
+Users can choose the source and target languages using a dropdown. The languagesData.js file contains the language codes and names.
+
+**Text Translation:**
+The app uses the MyMemory API for translation. The API is called via fetch() when the user submits the text to be translated.
+
+**Text Input:**
+A textarea is provided for input, with a character limit of 200. The user is shown the character count in real-time.
+
+**Language Swap:**
+A button allows users to swap the source and target languages.
+
+**External API**
+The app uses the MyMemory Translation API for performing text translations. The translation request is sent as follows:
+
+https://api.mymemory.translated.net/get?q={text}&langpair={source_language}|{target_language}
+This API is free and does not require an API key.
+
+
 
