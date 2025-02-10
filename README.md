@@ -4,7 +4,7 @@
 
 This Translator App allows users to easily translate text between different languages. It provides a simple and elegant user interface with a multilingual greeting screen. The app supports language selection, text input, and text translation using an external translation API.
 ## slide: https://gamma.app/docs/React-Based-Multilingual-Translator-App-mlfpdp8ikxy8gef
-## video demo: Update README with app overview, features, links to slide, deployed app, installation guide and contribution
+## video demo: https://drive.google.com/file/d/12x0o-DfdMasdgXG47c7YaVMmsb4jDH4j/view?usp=drive_link
 ## deployed app link: https://multilangtranslator.netlify.app/
 
 ## Features
@@ -15,6 +15,11 @@ This Translator App allows users to easily translate text between different lang
 - **Translation:** The app uses an external API to perform translation and display the result.
 - **Language Swap:** Users can swap the source and target languages with a button click.
 - **Responsive UI:** The app is responsive, designed to adapt to both small and large screen sizes.
+
+## Technologies Used
+1. React JS - for User interface
+2. TailwindCss for styling
+3. MyMemory API for the translation service
 
 ## Installation
 
@@ -27,15 +32,19 @@ cd translator-app
 
 **2. Install dependencies**
 Install the necessary packages using npm or yarn:
-npm install 
-or
+
+
+ npm install 
+ or 
  yarn install
 
 **3. Run the application**
 Once the dependencies are installed, start the development server:
-npm start 
-or
- yarn start
+
+
+ *npm start* 
+ or
+ *yarn start*
 
 This will open the app in your browser at http://localhost:3000.
 
