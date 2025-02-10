@@ -33,3 +33,27 @@ const TranslatorApp = ({ onClose }) => {
     }
   }, [showLanguages]) // Dependency array makes sure the effect runs whenever 'showLanguages' changes
 
+    // Function to handle the click event on language selection buttons (from/to)
+  const handleLanguageClick = (type) => {
+    setCurrentLanguageSelection(type) // Set which language ('from' or 'to') is being selected
+    setShowLanguages(true) // Show the language dropdown
+  }
+
+  // Function to handle selecting a language from the dropdown
+  const handleLanguagesSelect = (languageCode) => {
+    if (currentLanguageSelection === 'from') {
+      setSelectedLanguageFrom(languageCode) // Set the selected 'from' language
+    } else {
+      setSelectedLanguageTo(languageCode) // Set the selected 'to' language
+    }
+
+    setShowLanguages(false) // Hide the dropdown after selecting a language
+  }
+
+  // Function to swap 'from' and 'to' languages
+  const handleSwapLanguages = () => {
+    setSelectedLanguageFrom(selectedLanguageTo) // Swap 'from' language with 'to' language
+    setSelectedLanguageTo(selectedLanguageFrom) // Swap 'to' language with 'from' language
+  }
+
+
