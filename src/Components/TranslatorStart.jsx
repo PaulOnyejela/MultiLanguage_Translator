@@ -25,6 +25,12 @@ const TranslatorStart = ({ onStart }) => {
 
       {/* Button container with margin-top to separate from the text above */}
       <div className="flex items-center justify-center mt-15">
+        <button
+          className="w-32 h-10 bg-gradient-to-l from-[#DA98C9] to-[#3d5585] rounded-full font-righteous font-bold text-lg uppercase text-gray-700 tracking-widest active:translate-y-[1px] justify-center"
+          onClick={onStart} // Triggers the onStart callback when clicked
+        >
+          Start
+        </button>
       </div>
     </div>
   );
