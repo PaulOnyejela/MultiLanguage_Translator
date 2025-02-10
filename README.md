@@ -21,30 +21,22 @@ This Translator App allows users to easily translate text between different lang
 **Setup Instructions**
 To run this project locally, follow the instructions below:
 
-1. Clone the repository
-bash
-Copy
-Edit
+**1. Clone the repository**
 git clone https://github.com/your-username/translator-app.git
 cd translator-app
-2. Install dependencies
+
+**2. Install dependencies**
 Install the necessary packages using npm or yarn:
-
-bash
-Copy
-Edit
 npm install
-**or**
+# or
 yarn install
-3. Run the application
-Once the dependencies are installed, start the development server:
 
-bash
-Copy
-Edit
+**3. Run the application**
+Once the dependencies are installed, start the development server:
 npm start
- **or**
+# or
 yarn start
+
 This will open the app in your browser at http://localhost:3000.
 
  ##  Project Structure
