@@ -19,6 +19,8 @@ const TranslatorStart = ({ onStart }) => {
 
       {/* Centered content with a heading */}
       <div className="flex flex-col items-center justify-center mt-20 mb-36 space-y-5">
+        <h1 className="font-righteous text-4xl text-white uppercase text-center">Translator</h1>
+        <h1 className="font-righteous text-4xl text-white uppercase text-center">App</h1>
       </div>
 
       {/* Button container with margin-top to separate from the text above */}
