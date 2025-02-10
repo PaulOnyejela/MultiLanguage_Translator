@@ -56,4 +56,13 @@ const TranslatorApp = ({ onClose }) => {
     setSelectedLanguageTo(selectedLanguageFrom) // Swap 'to' language with 'from' language
   }
 
+    // Function to handle changes in the input text area
+  const handleInputChange = (e) => {
+    const value = e.target.value
+    if (value.length <= maxChars) { // Ensure the input text doesn't exceed maxChars limit
+      setInputText(value) // Set the input text state
+      setCharCount(value.length) // Update the character count
+    }
+  }
+
 
