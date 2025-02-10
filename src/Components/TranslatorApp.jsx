@@ -65,4 +65,31 @@ const TranslatorApp = ({ onClose }) => {
     }
   }
 
+  // Function to handle translation by calling an external API (MyMemory translation service)
+  const handleTranslate = async () => {
+    if (!inputText.trim()) { // If the input text is empty or just spaces, don't proceed
+      setTranslatedText('') // Clear the translated text
+      return
+    }
+
+    // Make an API request to translate the input text
+    const response = await fetch(
+      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(
+        inputText,
+      )}&langpair=${selectedLanguageFrom}|${selectedLanguageTo}`,
+    )
+
+    const data = await response.json() // Parse the API response to JSON
+
+    setTranslatedText(data.responseData.translatedText) // Set the translated text in the state
+  }
+
+  // Function to handle the Enter key press for triggering translation
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault() // Prevent the default behavior (new line)
+      handleTranslate() // Trigger translation when Enter is pressed
+    }
+  }
+
 
