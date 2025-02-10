@@ -4,7 +4,7 @@
 
 This Translator App allows users to easily translate text between different languages. It provides a simple and elegant user interface with a multilingual greeting screen. The app supports language selection, text input, and text translation using an external translation API.
 ## slide: https://gamma.app/docs/React-Based-Multilingual-Translator-App-mlfpdp8ikxy8gef
-## video demo: Update README with app overview, features, links to slide, deployed app and installation guide
+## video demo: Update README with app overview, features, links to slide, deployed app, installation guide and contribution
 ## deployed app link: https://multilangtranslator.netlify.app/
 
 ## Features
@@ -22,20 +22,20 @@ This Translator App allows users to easily translate text between different lang
 To run this project locally, follow the instructions below:
 
 **1. Clone the repository**
-git clone https://github.com/your-username/translator-app.git
+git clone https://github.com/your-username/translator-app.git 
 cd translator-app
 
 **2. Install dependencies**
 Install the necessary packages using npm or yarn:
-npm install
-# or
-yarn install
+npm install 
+or
+ yarn install
 
 **3. Run the application**
 Once the dependencies are installed, start the development server:
-npm start
-# or
-yarn start
+npm start 
+or
+ yarn start
 
 This will open the app in your browser at http://localhost:3000.
 
@@ -78,6 +78,22 @@ The app uses the MyMemory Translation API for performing text translations. The 
 
 https://api.mymemory.translated.net/get?q={text}&langpair={source_language}|{target_language}
 This API is free and does not require an API key.
+
+## How the App Works
+The user starts by clicking the "Start" button on the landing page (TranslatorStart).
+This triggers the display of the translation interface (TranslatorApp), where the user can select source and target languages.
+The user types in text, and the app makes an API call to the MyMemory translation service to translate the text.
+The translated text is then displayed on the screen.
+
+##Contributing
+Feel free to fork the repository and submit pull requests if you want to contribute. Any improvements or bug fixes are welcome!
+
+Fork the repository.
+Create a new branch (git checkout -b feature-name).
+Make your changes.
+Commit your changes (git commit -am 'Add feature').
+Push to the branch (git push origin feature-name).
+Create a new pull request.
 
 
 
