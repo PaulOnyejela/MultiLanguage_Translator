@@ -94,7 +94,7 @@ This triggers the display of the translation interface (TranslatorApp), where th
 The user types in text, and the app makes an API call to the MyMemory translation service to translate the text.
 The translated text is then displayed on the screen.
 
-##Contributing
+## Contributing
 Feel free to fork the repository and submit pull requests if you want to contribute. Any improvements or bug fixes are welcome!
 
 Fork the repository.
